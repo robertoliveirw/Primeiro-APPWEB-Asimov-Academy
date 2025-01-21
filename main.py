@@ -15,4 +15,9 @@ df_books = df_to100_books[df_to100_books['book price'] <= max_price]
 df_books
 #Histograma
 fig = px.bar(df_books['year of publication'].value_counts())
-st.plotly_chart(fig)
+fig2 = px.histogram(df_to100_books['book price'])
+
+col1, col2 = st.columns(2)
+
+col1.plotly_chart(fig)
+col2.plotly_chart(fig2)
