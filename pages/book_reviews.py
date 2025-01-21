@@ -27,3 +27,8 @@ col2.metric('Rating', book_rating)
 col3.metric('Year of Publication', book_year)
 
 st.divider()
+
+for row in df_reviews_f.values:
+    message = st.chat_message(f'{row[4]}')
+    message.write(f'**{row[2]}**')
+    message.write(f'{row[5]}')
