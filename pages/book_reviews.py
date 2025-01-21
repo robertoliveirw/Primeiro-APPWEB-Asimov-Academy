@@ -10,4 +10,7 @@ books = df_to100_books['book title'].unique()
 book = st.sidebar.selectbox('Books', books)
 
 df_book = df_to100_books[df_to100_books['book title'] == book]
+df_reviews_f = df_reviews[df_reviews['book name'] == book]
+
 df_book
+df_reviews_f
